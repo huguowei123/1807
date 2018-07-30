@@ -7,13 +7,20 @@ def isNum(num): #判断是否是数字
 def print_menu():
 	print("欢迎进入点菜系统".center(50," "))
 	while True:
-		print("1:上菜")
-		print("2:查菜")
-		print("3:改菜")
-		print("4:删菜")
-		print("5:打印菜单")
-		print("6:退出")
-		input_info()  #调用选择功能函数
+		a = input("输入帐号")
+		b = input("输入密码")
+		if a != "aaa" and b != "111":
+			print("重新输入")
+		else:
+			print("登录成功")
+			while True:
+				print("1:上菜")
+				print("2:查菜")
+				print("3:改菜")
+				print("4:删菜")
+				print("5:打印菜单")
+				print("6:退出")
+				input_info()  #调用选择功能函数
 def input_info():
 	num = input("请选择功能")
 	if isNum(num):
@@ -73,7 +80,6 @@ def change():
 	
 	for dcb in list:
 		if dcb["num"] == num:
-			while True:
 				print("1:修改菜名")
 				print("2:修改数量")
 				num = input("请选择功能")
@@ -88,7 +94,6 @@ def change():
 				elif num == 2:
 					count = int(input("请输入新数量"))
 					dcb["count"] = count
-					break
 			
 			
 def delete():

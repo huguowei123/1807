@@ -1,6 +1,6 @@
 list = []
-def isNum(num): #判断是否是数字
-	if num.isdigit():
+def isNum(num): 
+	if num.isdigit(): #判断是否数字
 		return True
 	else:
 		return False
@@ -77,7 +77,6 @@ def find():
 			break
 def change():
 	num = int(input("输入要修改菜名的桌号"))
-	
 	for dcb in list:
 		if dcb["num"] == num:
 				print("1:修改菜名")
